@@ -161,7 +161,7 @@ def team_names
   end
   
 def player_numbers(team_names)
-  
+  game_hash.map do 
 
 
 
