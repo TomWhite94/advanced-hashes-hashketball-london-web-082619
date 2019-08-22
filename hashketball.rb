@@ -176,25 +176,38 @@ end
 nums
 end
 
-def player_stats(players_name)
-  new_hash = {}
-  game_hash.each do |place, team|
-    team.each do |attributes, data|
-      if attributes == :players
-        data.each do |player|
-          if player[:players_name] = players_name
-            new_hash = player.delete_if do |k, v|
-            k == :players_name
-          end
-        
+#def player_stats(players_name)
+ # new_hash = {}
+  #game_hash.each do |place, team|
+   # team.each do |attributes, data|
+    #  if attributes == :players
+     #   data.each do |player|
+      #    if player[:players_name] = players_name
+       #     new_hash = player.delete_if do |k, v|
+        #    k == :players_name
+         # end
+#        #
+ #   end
+  #end
+  #end
+  #end  
+#end
+#new_hash
+#end
+
+def player_stats(player_name)
+  player_stats = {}
+  game_hash.each do |team, team_details_hash|
+    team_details_hash[:players].each do |stats|
+
+      if stats[:name] == player_name
+        stats.delete(:name)
+        player_stats = stats
+      end
     end
   end
-  end
-  end  
+  player_stats
 end
-new_hash
-end
-
 
  
   
