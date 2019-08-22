@@ -176,7 +176,8 @@ end
 nums
 end
 
-def player_stats(players_name)  
+def player_stats(players_name)
+  new_hash = {}
   
   
 
