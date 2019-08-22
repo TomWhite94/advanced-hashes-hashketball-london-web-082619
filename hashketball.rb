@@ -176,7 +176,7 @@ end
 nums
 end
 
-def player_stats  
+def player_stats(players_name)  
   
   
 
