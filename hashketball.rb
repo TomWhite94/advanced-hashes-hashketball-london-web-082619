@@ -176,7 +176,7 @@ end
 nums
 end
 
-def player_stats(player_name)
+def player_stats(players_name)
   new_hash = {}
   game_hash.each do |place, team|
     team.each do |attributes, data|
